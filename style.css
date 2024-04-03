@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+}
+
+header {
+    background-color: #e68c5b;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+footer {
+    background-color: #cf7247;
+    padding: 20px;
+    text-align: center;
+}
+
+header, nav {
+    border-bottom: 4px solid #ebc660; 
+} 
+nav {
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+    background-color: #cf7247;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.left-section {
+    width: 15%;
+    background-color: #e6bf8d;
+    padding: 20px;
+}
+
+.right-section {
+    width: 85%;
+    background-color: #fdfdfd;
+    padding: 20px;
+}
+
+.right-section h2 {
+    color: #cf7247;
+}
+
+/* Flexbox voor desktops */
+@media only screen and (min-width: 601px) {
+    main {
+        display: flex;
+    }
+
+    .left-section {
+        flex: 0 0 15%; /* 30% breedte voor de linkersectie */
+    }
+
+    .right-section {
+        flex: 1; /* De resterende breedte voor de rechtersectie */
+    }
+}
+
+/* Mediaquery voor mobiele apparaten */
+@media only screen and (max-width: 600px) {
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    nav {
+        position: static; /* Remove absolute positioning */
+        margin: 0;
+        padding: 10px 20px; /* Adjust padding */
+        background-color: #e68c5b; /* Adjust background color */
+    }
+
+    nav ul {
+        text-align: center; /* Center align menu items */
+    }
+
+    nav ul li {
+        display: block; /* Change display to block for list items */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    nav ul li a {
+        display: inline-block; /* Ensure proper spacing between menu items */
+        padding: 5px 10px; /* Adjust padding */
+    }
+}
